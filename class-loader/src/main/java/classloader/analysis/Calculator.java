@@ -1,6 +1,7 @@
 package classloader.analysis;
 
 import classloader.analysis.model.Student;
+import classloader.analysis.model.Teacher;
 
 /**
  * @author : Vander
@@ -20,6 +21,7 @@ public class Calculator {
     }
 
     public static void main(String[] args){
+        Teacher teacher;
         Calculator calculator = new Calculator();
         calculator.add(3, 4);
     }

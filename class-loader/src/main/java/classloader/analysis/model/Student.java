@@ -1,6 +1,5 @@
 package classloader.analysis.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,12 +9,21 @@ import lombok.NoArgsConstructor;
  * @description :
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Student {
 
     private int stuNo;
 
     private String stuName;
+
+    public Student(int stuNo, String stuName) {
+        this.stuNo = stuNo;
+        this.stuName = stuName;
+        System.out.println("Student Constructor");
+    }
+
+    static {
+        System.out.println("static block : Student");
+    }
 
 }
